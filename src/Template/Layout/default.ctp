@@ -18,7 +18,7 @@
     <?php echo $this->Html->css('Gentelella./vendors/bootstrap-progressbar/css/bootstrap-progressbar-3.3.4.min'); ?>
     <?php echo $this->Html->css('Gentelella./css/maps/jquery-jvectormap-2.0.3'); ?>
     <?php echo $this->Html->css('Gentelella./build/css/custom.min'); ?>
-    <?php echo $this->Html->css('/css/custom'); ?>
+    <?php //echo $this->Html->css('/css/custom'); ?>
 
     <?php echo $this->fetch('css'); ?>
 
@@ -29,7 +29,7 @@
 <script src="https://oss.maxcdn.com/respond/1.4.2/respond.min.js"></script>
 <![endif]-->
 </head>
-<body class="nav-md  footer_fixed">
+<body class="nav-md footer_fixed menu_fixed">
 <div class="container body">
     <div class="main_container">
         <!-- Left side column. contains the sidebar -->

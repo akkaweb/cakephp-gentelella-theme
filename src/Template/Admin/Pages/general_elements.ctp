@@ -1,3 +1,14 @@
+<?php
+
+$this->Html->css('Gentelella./vendors/pnotify/dist/pnotify', ['block' => true]);
+$this->Html->css('Gentelella./vendors/pnotify/dist/pnotify.buttons', ['block' => true]);
+$this->Html->css('Gentelella./vendors/pnotify/dist/pnotify.nonblock', ['block' => true]);
+$this->Html->script('Gentelella./vendors/pnotify/dist/pnotify', ['block' => true]);
+$this->Html->script('Gentelella./vendors/pnotify/dist/pnotify.buttons', ['block' => true]);
+$this->Html->script('Gentelella./vendors/pnotify/dist/pnotify.nonblock', ['block' => true]);
+
+?>
+
 <div class="">
   <div class="page-title">
     <div class="title_left">

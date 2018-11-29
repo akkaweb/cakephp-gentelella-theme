@@ -14,7 +14,7 @@ if (file_exists($file)) {
 } else {
     ?>
     <!-- menu profile quick info -->
-    <div class="profile">
+    <div class="profile clearfix">
         <div class="profile_pic">
             <?php echo $this->Html->image('Gentelella./images/img.jpg', ['class' => 'img-circle profile_img']) ?>
         </div>

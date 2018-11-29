@@ -44,20 +44,20 @@
 
           <div class="col-md-7 col-sm-7 col-xs-12">
             <div class="product-image">
-              <img src="images/prod1.jpg" alt="..." />
+              <img src="/gentelella/images/prod1.jpg" alt="..." />
             </div>
             <div class="product_gallery">
               <a>
-                <img src="images/prod2.jpg" alt="..." />
+                <img src="/gentelella/images/prod2.jpg" alt="..." />
               </a>
               <a>
-                <img src="images/prod3.jpg" alt="..." />
+                <img src="/gentelella/images/prod3.jpg" alt="..." />
               </a>
               <a>
-                <img src="images/prod4.jpg" alt="..." />
+                <img src="/gentelella/images/prod4.jpg" alt="..." />
               </a>
               <a>
-                <img src="images/prod5.jpg" alt="..." />
+                <img src="/gentelella/images/prod5.jpg" alt="..." />
               </a>
             </div>
           </div>

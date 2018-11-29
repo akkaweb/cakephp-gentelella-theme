@@ -67,7 +67,7 @@
                 <td><?= h($feedback->uri) ?></td>
                 <td><?= h($feedback->ip) ?></td>
                 <td class="actions" style="white-space:nowrap">
-                  <?= $this->Html->link(__d('gentelella','Edit'), ['action' => 'edit', $feedback->id], ['class'=>'btn btn-primary btn-xs']) ?>
+                  <?= $this->Html->link(__d('gentelella','View'), ['action' => 'view', $feedback->id], ['class'=>'btn btn-primary btn-xs']) ?>
                   <?= $this->Form->postLink(__d('gentelella','Delete'), ['action' => 'delete', $feedback->id], ['confirm' => __d('gentelella','Confirm to delete this entry?'), 'class'=>'btn btn-danger btn-xs']) ?>
                 </td>
               </tr>

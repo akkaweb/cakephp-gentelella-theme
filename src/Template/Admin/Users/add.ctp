@@ -40,35 +40,87 @@
             </div>
             <div class="x_content">
                 <br/>
-                <?= $this->Form->create($user, array('role' => 'form', 'class' => 'form-horizontal form-label-left', 'id' => 'form')) ?>
-
-                <?php
-                                            echo $this->Form->input('is_superuser');
-                                                        echo $this->Form->input('facebook_id');
-                                                        echo $this->Form->input('api_token');
-                                                        echo $this->Form->input('username');
-                                                        echo $this->Form->input('password');
-                                                        echo $this->Form->input('email');
-                                                        echo $this->Form->input('first_name');
-                                                        echo $this->Form->input('last_name');
-                                                        echo $this->Form->input('photo');
-                                                        echo $this->Form->input('photo_dir');
-                                                        echo $this->Form->input('active');
-                                                        echo $this->Form->input('token');
-                                                        echo $this->Form->input('token_expires');
-                                                        echo $this->Form->input('role');
-                                                        echo $this->Form->input('activation_date');
-                                                        echo $this->Form->input('tos_date');
-                                                        echo $this->Form->input('created_by');
-                                                        echo $this->Form->input('modified_by');
-                                                        echo $this->Form->input('deleted');
-                                            ?>
-                <div class="ln_solid"></div>
-                <div class="form-group">
-                    <div class="col-md-6 col-sm-6 col-xs-12 col-md-offset-3">
-                        <?= $this->Form->button(__d('gentelella','Save'), ['class' => 'btn btn-success']) ?>
+                <?= $this->Form->create($member, array('role' => 'form', 'class' => 'form-horizontal form-label-left', 'id' => 'form')) ?>
+<?php unset($member->password); ?>
+                  <?php
+                  $formTemplates = [
+                    'inputContainer' => '{{content}}',
+                    'selectContainer' => '{{content}}'
+                  ];
+                  $this->Form->setTemplates($formTemplates);
+                  ?>
+                    <div class="col-md-12">
+                        <div class="form-group">
+                            <label class="control-label">
+                                Username <span class="symbol required"></span>
+                            </label>
+                          <?php echo $this->Form->input('username', ['placeholder' => 'Username', 'class' => 'form-control', 'label' => false]); ?>
+                        </div>
                     </div>
-                </div>
+                <div class="col-md-12">
+                        <div class="form-group">
+                            <label class="control-label">
+                                Role <span class="symbol required"></span>
+                            </label>
+                          <?php $role = $member['role']; ?>
+                          <?php echo $this->Form->select('role', ['empty' => 'Select role', 'admin' => 'Administrator', 'user' => 'Member'], ['val' => $role, 'class' => 'form-control show-tick', 'label' => false]); ?>
+                        </div>
+                    </div>
+
+
+                    <div class="col-md-12">
+                        <div class="form-group">
+                            <label class="control-label">
+                                First Name <span class="symbol required"></span>
+                            </label>
+                          <?php echo $this->Form->input('first_name', ['placeholder' => 'First Name', 'class' => 'form-control', 'label' => false]); ?>
+                        </div>
+                    </div>
+
+
+                    <div class="col-md-12">
+                        <div class="form-group">
+                            <label class="control-label">
+                                Last Name <span class="symbol required"></span>
+                            </label>
+                          <?php echo $this->Form->input('last_name', ['placeholder' => 'Last Name', 'class' => 'form-control', 'label' => false]); ?>
+                        </div>
+                    </div>
+
+
+                    <div class="col-md-12">
+                        <div class="form-group">
+                            <label class="control-label">
+                                Email <span class="symbol required"></span>
+                            </label>
+                          <?php echo $this->Form->input('email', ['placeholder' => 'Email Address', 'class' => 'form-control', 'label' => false]); ?>
+                        </div>
+                    </div>
+
+
+                    <div class="col-md-12">
+                        <div class="form-group">
+                            <label class="control-label">
+                                Password <span class="symbol required"></span>
+                            </label>
+                          <?php echo $this->Form->input('password', ['placeholder' => 'Enter Password', 'class' => 'form-control', 'label' => false]); ?>
+                        </div>
+                    </div>
+
+                    <div class="col-md-12">
+                        <label class="control-label">Active? <span class="symbol required"></span></label>
+                        <div class="switch">
+                            <label>No
+                              <?php echo $this->Form->input('active', ['templates' => ['inputContainer' => '{{content}}'], 'label' => false, 'type' => 'checkbox', 'required' => false, 'class' => 'js-switch', 'data-color' => '#26c6da']); ?>
+                                Yes
+                            </label>
+                        </div>
+                    </div>
+
+                    <div class="col-md-12 text-right">
+                      <?php echo $this->Form->button('Update User <i class="fa fa-arrow-circle-right"></i>', ['class' => 'btn btn-success', 'type' => 'submit', 'id' => 'submit-button']); ?>
+                    </div>
+                <div class="ln_solid"></div>
 
                 <?= $this->Form->end() ?>
             </div>
